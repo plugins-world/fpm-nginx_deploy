@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -ex
+
+/usr/bin/python3 /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+
+su - www-data -s /bin/bash -c "docker-run"
+
+exec cron -f
