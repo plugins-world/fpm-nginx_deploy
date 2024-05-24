@@ -26,5 +26,7 @@ time ansible all -i "${SERVER_IP}" -e "$SERVER_ENV" -m shell -a "chdir=${DIR} ch
 if [ -z $SSH_PASSWORD ];then
     # time cd aliyun-fc-demo/supply-demand-test/ && s deploy
     # time rm -rf dist/ dist.zip
-    time rm -rf ./vitepress/dist/ dist.zip
+    time rm -rf ./dist/
+    time rm -rf ./dist.zip
+    echo "success"
 fi
